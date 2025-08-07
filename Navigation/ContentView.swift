@@ -12,19 +12,22 @@ struct ContentView: View {
         NavigationStack {
             VStack{
                 Text("This is the root view 🙈")
-                    .font(.title)
                 NavigationLink(destination: SecondView()
                 ){
-                    Text("Click Me!")
+                    Text("About")
                     
                 }
-                NavigationLink(destination: Text("There is no secret page 😓")
+                NavigationLink(destination: ContactView()
                 ){
-                    Text("Click here for a secret page 🤫")}
+                    Text("Contact")}
+                NavigationLink(destination: HelpView()
+                ){
+                    Text("Help")
+                    
+                }
             }//end VStack
             .navigationTitle("Home 🏡")
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarHidden(true)
+            
         }//end NavigationStack
     }
 }
